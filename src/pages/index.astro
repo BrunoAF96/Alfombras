@@ -195,7 +195,7 @@ const extraGroups = rugGroups.slice(6);
 		<div class="rugs-grid">
 			{
 				extraGroups.map((group, groupIndex) => (
-					<article class={`rug-card rug-switch extra variant-${groupIndex % 2}`}>
+					<article class={`rug-card rug-switch extra variant-${groupIndex % 4}`}>
 						<img
 							class="frame frame-a"
 							src={encodeURI(`/images/${group[0]}`)}
@@ -263,8 +263,7 @@ const extraGroups = rugGroups.slice(6);
 		transform: translateY(22px) scale(0.72) rotate(-12deg);
 		filter: brightness(0.92);
 		animation:
-			brandLogoIntro 1.35s cubic-bezier(0.16, 0.88, 0.24, 1.2) 0.08s forwards,
-			brandLogoFloat 3.2s ease-in-out 1.45s infinite;
+			brandLogoIntro 2.1s cubic-bezier(0.16, 0.88, 0.24, 1.2) 0.08s forwards;
 	}
 
 	.promo-strip {
@@ -468,6 +467,7 @@ const extraGroups = rugGroups.slice(6);
 		grid-column: span 6;
 		grid-row: span 4;
 		min-height: 250px;
+		background: #070707;
 	}
 
 	.rugs-grid .rug-card.variant-0 {
@@ -482,20 +482,42 @@ const extraGroups = rugGroups.slice(6);
 		min-height: 240px;
 	}
 
+	.rugs-grid .rug-card.variant-2 {
+		grid-column: span 4;
+		grid-row: span 4;
+		min-height: 220px;
+	}
+
+	.rugs-grid .rug-card.variant-3 {
+		grid-column: span 8;
+		grid-row: span 4;
+		min-height: 260px;
+	}
+
 	.rugs-grid .rug-card .frame-a {
-		animation: extraDriftA 14s ease-in-out infinite;
+		animation: extraDriftA 18s ease-in-out 1 forwards;
 	}
 
 	.rugs-grid .rug-card .frame-b {
-		animation: extraDriftB 14s ease-in-out infinite;
+		animation: extraDriftB 18s ease-in-out 1 forwards;
 	}
 
 	.rugs-grid .rug-card.variant-0 .frame-a {
-		animation: extraVerticalA 15s ease-in-out infinite;
+		animation: extraVerticalA 20s ease-in-out 1 forwards;
 	}
 
 	.rugs-grid .rug-card.variant-0 .frame-b {
-		animation: extraVerticalB 15s ease-in-out infinite;
+		animation: extraVerticalB 20s ease-in-out 1 forwards;
+	}
+
+	.rugs-grid .rug-card.variant-2 .frame-a,
+	.rugs-grid .rug-card.variant-2 .frame-b {
+		animation-duration: 22s;
+	}
+
+	.rugs-grid .rug-card.variant-3 .frame-a,
+	.rugs-grid .rug-card.variant-3 .frame-b {
+		animation-duration: 19s;
 	}
 
 	.rugs-grid .rug-card:nth-child(3n) .frame-a,
@@ -514,8 +536,14 @@ const extraGroups = rugGroups.slice(6);
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: center;
 		filter: saturate(1.08) contrast(1.04);
 		transition: transform 0.75s ease;
+	}
+
+	.rugs-grid .rug-card img {
+		object-fit: contain;
+		padding: 6px;
 	}
 
 	.rug-switch .frame {
@@ -524,12 +552,12 @@ const extraGroups = rugGroups.slice(6);
 
 	.rug-switch .frame-a {
 		opacity: 1;
-		animation: rugFrameA 10s ease-in-out infinite;
+		animation: rugFrameA 14s ease-in-out 1 forwards;
 	}
 
 	.rug-switch .frame-b {
 		opacity: 0;
-		animation: rugFrameB 10s ease-in-out infinite;
+		animation: rugFrameB 14s ease-in-out 1 forwards;
 	}
 
 	.rugs-featured .layout-b .frame-a,
@@ -540,7 +568,7 @@ const extraGroups = rugGroups.slice(6);
 
 	.rugs-featured .layout-a .frame-a {
 		opacity: 1;
-		animation: rugPanLeftRight 9s ease-in-out infinite;
+		animation: rugPanLeftRight 13.5s ease-in-out 1 forwards;
 	}
 
 	.rugs-featured .layout-a .frame-b {
@@ -548,11 +576,11 @@ const extraGroups = rugGroups.slice(6);
 	}
 
 	.rugs-featured .layout-b .frame-b {
-		animation: rugSweepFromLeftIntro 3.4s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
+		animation: rugSweepFromLeftIntro 5.2s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
 	}
 
 	.rugs-featured .layout-c .frame-b {
-		animation: rugSweepFromRightIntro 3.4s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
+		animation: rugSweepFromRightIntro 5.2s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
 	}
 
 	.rugs-featured .layout-b,
@@ -576,7 +604,7 @@ const extraGroups = rugGroups.slice(6);
 	}
 
 	.rugs-featured .layout-d .frame-b {
-		animation: rugSweepFromBottomIntro 3.2s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
+		animation: rugSweepFromBottomIntro 5s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
 	}
 
 	.rugs-featured .layout-e,
@@ -586,12 +614,12 @@ const extraGroups = rugGroups.slice(6);
 
 	.rugs-featured .layout-e {
 		z-index: 3;
-		animation: moveToCenterLeftCard 9s ease-in-out 3s infinite;
+		animation: moveToCenterLeftCard 12s ease-in-out 3.6s 1 forwards;
 	}
 
 	.rugs-featured .layout-f {
 		z-index: 2;
-		animation: moveToCenterRightCard 9s ease-in-out 3s infinite;
+		animation: moveToCenterRightCard 12s ease-in-out 3.6s 1 forwards;
 	}
 
 	@keyframes brandLogoIntro {
@@ -965,7 +993,7 @@ const extraGroups = rugGroups.slice(6);
 		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.42);
 		z-index: 50;
 		transition: transform 0.25s ease, box-shadow 0.25s ease;
-		animation: wppFloat 3.2s ease-in-out infinite, wppPulse 2.6s ease-in-out infinite;
+		animation: wppFloat 4.8s ease-in-out 1 forwards, wppPulse 4.2s ease-in-out 1 forwards;
 	}
 
 	.whatsapp-float:hover {
@@ -1004,7 +1032,7 @@ const extraGroups = rugGroups.slice(6);
 		white-space: nowrap;
 		box-shadow: 0 8px 18px rgba(0, 0, 0, 0.38);
 		pointer-events: none;
-		animation: wppBubble 2.8s ease-in-out infinite;
+		animation: wppBubble 4.8s ease-in-out 1 forwards;
 	}
 
 	@keyframes wppFloat {
