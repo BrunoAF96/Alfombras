@@ -1,0 +1,1024 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const rugGroups = [
+	[
+		'WhatsApp Image 2026-04-13 at 16.50.23.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.50.23 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.53.56.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.53.56 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.54.58.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.54.59.jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.56.08.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.56.09.jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.56.22.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.56.22 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.56.32.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.56.32 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.56.42.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.56.42 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.56.53.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.56.54.jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.57.14.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.57.14 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.57.26.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.57.27.jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.57.36.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.57.37.jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.58.14.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.58.14 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.58.26.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.58.26 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 16.58.39.jpeg',
+		'WhatsApp Image 2026-04-13 at 16.58.39 (1).jpeg'
+	],
+	[
+		'WhatsApp Image 2026-04-13 at 17.00.45.jpeg',
+		'WhatsApp Image 2026-04-13 at 17.00.46.jpeg'
+	]
+];
+
+const featuredGroups = rugGroups.slice(0, 6);
+const extraGroups = rugGroups.slice(6);
+---
+
+<Layout>
+	<header class="hero-strip" aria-label="Banner principal">
+		<img class="brand-logo" src="/images/Logo.jpeg" alt="Logo de la tienda de alfombras" />
+	</header>
+
+	<section class="promo-strip" aria-label="Mensaje promocional">
+		<div class="promo-content">
+			<h2 class="promo-title">ey hola!</h2>
+			<div class="promo-copy">
+				<p class="promo-lines">
+					<span>estás para</span>
+					<span class="strong">darle onda a tu</span>
+					<span>espacio con una</span>
+				</p>
+				<p class="promo-question">Alfombra?</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="rugs-section" aria-label="Catalogo de alfombras">
+		<div class="rugs-featured">
+			{featuredGroups[0] && (
+				<article class="rug-card rug-switch layout-a">
+					<img
+						class="frame frame-a"
+						src={encodeURI(`/images/${featuredGroups[0][0]}`)}
+						alt="Alfombra artesanal"
+						loading="lazy"
+					/>
+					<img
+						class="frame frame-b"
+						src={encodeURI(`/images/${featuredGroups[0][1]}`)}
+						alt="Alfombra artesanal vista alternativa"
+						loading="lazy"
+					/>
+				</article>
+			)}
+
+			{featuredGroups[1] && (
+				<article class="rug-card rug-switch layout-b">
+					<img
+						class="frame frame-a"
+						src={encodeURI(`/images/${featuredGroups[1][0]}`)}
+						alt="Alfombra artesanal"
+						loading="lazy"
+					/>
+					<img
+						class="frame frame-b"
+						src={encodeURI(`/images/${featuredGroups[1][1]}`)}
+						alt="Alfombra artesanal vista alternativa"
+						loading="lazy"
+					/>
+				</article>
+			)}
+
+			{featuredGroups[2] && (
+				<article class="rug-card rug-switch layout-c">
+					<img
+						class="frame frame-a"
+						src={encodeURI(`/images/${featuredGroups[2][0]}`)}
+						alt="Alfombra artesanal"
+						loading="lazy"
+					/>
+					<img
+						class="frame frame-b"
+						src={encodeURI(`/images/${featuredGroups[2][1]}`)}
+						alt="Alfombra artesanal vista alternativa"
+						loading="lazy"
+					/>
+				</article>
+			)}
+
+			{featuredGroups[3] && (
+				<article class="rug-card rug-switch layout-d">
+					<img
+						class="frame frame-a"
+						src={encodeURI(`/images/${featuredGroups[3][0]}`)}
+						alt="Alfombra artesanal"
+						loading="lazy"
+					/>
+					<img
+						class="frame frame-b"
+						src={encodeURI(`/images/${featuredGroups[3][1]}`)}
+						alt="Alfombra artesanal vista alternativa"
+						loading="lazy"
+					/>
+				</article>
+			)}
+
+			{featuredGroups[4] && (
+				<article class="rug-card rug-switch layout-e">
+					<img
+						class="frame frame-a"
+						src={encodeURI(`/images/${featuredGroups[4][0]}`)}
+						alt="Alfombra artesanal"
+						loading="lazy"
+					/>
+					<img
+						class="frame frame-b"
+						src={encodeURI(`/images/${featuredGroups[4][1]}`)}
+						alt="Alfombra artesanal vista alternativa"
+						loading="lazy"
+					/>
+				</article>
+			)}
+
+			{featuredGroups[5] && (
+				<article class="rug-card rug-switch layout-f">
+					<img
+						class="frame frame-a"
+						src={encodeURI(`/images/${featuredGroups[5][0]}`)}
+						alt="Alfombra artesanal"
+						loading="lazy"
+					/>
+					<img
+						class="frame frame-b"
+						src={encodeURI(`/images/${featuredGroups[5][1]}`)}
+						alt="Alfombra artesanal vista alternativa"
+						loading="lazy"
+					/>
+				</article>
+			)}
+		</div>
+
+		<div class="rugs-grid">
+			{
+				extraGroups.map((group, groupIndex) => (
+					<article class={`rug-card rug-switch extra variant-${groupIndex % 2}`}>
+						<img
+							class="frame frame-a"
+							src={encodeURI(`/images/${group[0]}`)}
+							alt="Alfombra artesanal"
+							loading="lazy"
+						/>
+						<img
+							class="frame frame-b"
+							src={encodeURI(`/images/${group[1]}`)}
+							alt="Alfombra artesanal vista alternativa"
+							loading="lazy"
+						/>
+					</article>
+				))
+			}
+		</div>
+	</section>
+</Layout>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Outfit:wght@300;400;700;900&display=swap');
+
+	.hero-strip {
+		width: 100%;
+		height: 196px;
+		margin: 0;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		color: #f3f3f3;
+		background:
+			linear-gradient(90deg, #0a0a0a 0%, #161616 45%, #0b0b0b 100%);
+	}
+
+	.brand-logo {
+		width: 98px;
+		height: 98px;
+		max-width: 98px;
+		max-height: 98px;
+		border-radius: 50%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+		border: none;
+		opacity: 0;
+		transform: translateY(22px) scale(0.72) rotate(-12deg);
+		filter: brightness(0.92);
+		animation:
+			brandLogoIntro 1.35s cubic-bezier(0.16, 0.88, 0.24, 1.2) 0.08s forwards,
+			brandLogoFloat 3.2s ease-in-out 1.45s infinite;
+	}
+
+	.promo-strip {
+		width: 100%;
+		padding: 40px 24px 56px;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 86% 14%, rgba(255, 227, 121, 0.16), transparent 22%),
+			radial-gradient(circle at 12% 82%, rgba(129, 142, 255, 0.1), transparent 30%),
+			linear-gradient(180deg, #151515 0%, #040404 100%);
+	}
+
+	.promo-strip::before,
+	.promo-strip::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+	}
+
+	.promo-strip::before {
+		opacity: 0.26;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.2) 0.6px, transparent 0.8px);
+		background-size: 3px 3px;
+		mix-blend-mode: soft-light;
+	}
+
+	.promo-strip::after {
+		opacity: 0.16;
+		background-image:
+			repeating-linear-gradient(
+				0deg,
+				rgba(255, 255, 255, 0.08) 0,
+				rgba(255, 255, 255, 0.08) 1px,
+				transparent 1px,
+				transparent 3px
+			),
+			repeating-linear-gradient(
+				90deg,
+				rgba(255, 255, 255, 0.05) 0,
+				rgba(255, 255, 255, 0.05) 1px,
+				transparent 1px,
+				transparent 4px
+			);
+	}
+
+	.promo-content {
+		position: relative;
+		z-index: 1;
+		width: min(1180px, 100%);
+	}
+
+	.promo-title {
+		margin: 0;
+		font-family: 'Archivo Black', sans-serif;
+		font-size: clamp(3rem, 11.5vw, 7.8rem);
+		line-height: 0.85;
+		letter-spacing: 0.005em;
+		background-image:
+			linear-gradient(180deg, #fafafa 0%, #d7d7d7 100%),
+			repeating-linear-gradient(
+				-15deg,
+				rgba(0, 0, 0, 0.22) 0,
+				rgba(0, 0, 0, 0.22) 1px,
+				transparent 1px,
+				transparent 4px
+			);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		text-transform: lowercase;
+		text-shadow: 0 12px 30px rgba(0, 0, 0, 0.52);
+		text-align: left;
+	}
+
+	.promo-copy {
+		margin-left: auto;
+		width: min(760px, 100%);
+		margin-top: 2px;
+	}
+
+	.promo-lines {
+		margin: 0;
+		display: grid;
+		gap: 1px;
+		text-align: right;
+		font-family: 'Outfit', sans-serif;
+		font-weight: 300;
+		font-size: clamp(1.6rem, 4.9vw, 4.2rem);
+		line-height: 0.88;
+		letter-spacing: 0.005em;
+		color: #ececec;
+		text-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+		margin-top: 4px;
+	}
+
+	.promo-lines span {
+		display: block;
+	}
+
+	.promo-lines .strong {
+		font-weight: 900;
+	}
+
+	.promo-question {
+		margin: 10px 0 0;
+		font-family: 'Archivo Black', sans-serif;
+		text-transform: lowercase;
+		font-size: clamp(2.5rem, 7.7vw, 6.1rem);
+		line-height: 0.84;
+		letter-spacing: 0.01em;
+		text-align: right;
+		background-image:
+			linear-gradient(90deg, #dd7bd4 0%, #b36cff 38%, #84e46d 70%, #2bbf5f 100%),
+			radial-gradient(circle, rgba(0, 0, 0, 0.26) 0.9px, transparent 1.1px),
+			repeating-linear-gradient(
+				-18deg,
+				rgba(0, 0, 0, 0.24) 0,
+				rgba(0, 0, 0, 0.24) 1px,
+				transparent 1px,
+				transparent 5px
+			);
+		background-size: 100% 100%, 7px 7px, 100% 100%;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		text-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+	}
+
+	.rugs-section {
+		padding: 0;
+		background:
+			radial-gradient(circle at 10% 0%, rgba(116, 255, 184, 0.08), transparent 26%),
+			radial-gradient(circle at 90% 30%, rgba(227, 139, 255, 0.08), transparent 34%),
+			#050505;
+	}
+
+	.rugs-grid {
+		width: 100%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		grid-auto-flow: dense;
+		grid-auto-rows: 110px;
+		gap: 0;
+	}
+
+	.rugs-featured {
+		width: 100%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-rows: repeat(11, minmax(175px, auto));
+		gap: 0;
+	}
+
+	.rug-card {
+		position: relative;
+		overflow: hidden;
+		border-radius: 0;
+		background: #0f0f0f;
+		isolation: isolate;
+		min-height: 0;
+	}
+
+	.rugs-featured .layout-a {
+		grid-column: 1;
+		grid-row: 1 / span 4;
+	}
+
+	.rugs-featured .layout-b {
+		grid-column: 2;
+		grid-row: 1 / span 2;
+	}
+
+	.rugs-featured .layout-c {
+		grid-column: 2;
+		grid-row: 3 / span 2;
+	}
+
+	.rugs-featured .layout-d {
+		grid-column: 1 / -1;
+		grid-row: 5 / span 3;
+	}
+
+	.rugs-featured .layout-e {
+		grid-column: 1;
+		grid-row: 8 / span 4;
+	}
+
+	.rugs-featured .layout-f {
+		grid-column: 2;
+		grid-row: 8 / span 4;
+	}
+
+	.rugs-grid .rug-card {
+		grid-column: span 6;
+		grid-row: span 10;
+		min-height: 940px;
+	}
+
+	.rugs-grid .rug-card.variant-0 {
+		grid-column: span 7;
+		grid-row: span 10;
+		min-height: 1080px;
+	}
+
+	.rugs-grid .rug-card.variant-1 {
+		grid-column: span 5;
+		grid-row: span 8;
+		min-height: 840px;
+	}
+
+	.rugs-grid .rug-card .frame-a {
+		animation: extraDriftA 14s ease-in-out infinite;
+	}
+
+	.rugs-grid .rug-card .frame-b {
+		animation: extraDriftB 14s ease-in-out infinite;
+	}
+
+	.rugs-grid .rug-card.variant-0 .frame-a {
+		animation: extraVerticalA 15s ease-in-out infinite;
+	}
+
+	.rugs-grid .rug-card.variant-0 .frame-b {
+		animation: extraVerticalB 15s ease-in-out infinite;
+	}
+
+	.rugs-grid .rug-card:nth-child(3n) .frame-a,
+	.rugs-grid .rug-card:nth-child(3n) .frame-b {
+		animation-delay: 1.2s;
+	}
+
+	.rugs-grid .rug-card:nth-child(3n + 1) .frame-a,
+	.rugs-grid .rug-card:nth-child(3n + 1) .frame-b {
+		animation-delay: 2.1s;
+	}
+
+	.rug-card img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: saturate(1.08) contrast(1.04);
+		transition: transform 0.75s ease;
+	}
+
+	.rug-switch .frame {
+		transition: opacity 1.2s ease, transform 1.6s ease;
+	}
+
+	.rug-switch .frame-a {
+		opacity: 1;
+		animation: rugFrameA 10s ease-in-out infinite;
+	}
+
+	.rug-switch .frame-b {
+		opacity: 0;
+		animation: rugFrameB 10s ease-in-out infinite;
+	}
+
+	.rugs-featured .layout-b .frame-a,
+	.rugs-featured .layout-c .frame-a {
+		opacity: 0;
+		animation: rugKeepHiddenIntro 2.4s ease-out 1 forwards;
+	}
+
+	.rugs-featured .layout-a .frame-a {
+		opacity: 1;
+		animation: rugPanLeftRight 9s ease-in-out infinite;
+	}
+
+	.rugs-featured .layout-a .frame-b {
+		display: none;
+	}
+
+	.rugs-featured .layout-b .frame-b {
+		animation: rugSweepFromLeftIntro 3.4s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
+	}
+
+	.rugs-featured .layout-c .frame-b {
+		animation: rugSweepFromRightIntro 3.4s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
+	}
+
+	.rugs-featured .layout-b,
+	.rugs-featured .layout-c {
+		will-change: auto;
+	}
+
+	.rugs-featured .layout-b {
+		z-index: 3;
+		animation: none;
+	}
+
+	.rugs-featured .layout-c {
+		z-index: 2;
+		animation: none;
+	}
+
+	.rugs-featured .layout-d .frame-a {
+		opacity: 0;
+		animation: rugKeepHiddenIntro 3.2s ease-out 1 forwards;
+	}
+
+	.rugs-featured .layout-d .frame-b {
+		animation: rugSweepFromBottomIntro 3.2s cubic-bezier(0.22, 0.61, 0.36, 1) 1 forwards;
+	}
+
+	.rugs-featured .layout-e,
+	.rugs-featured .layout-f {
+		will-change: transform;
+	}
+
+	.rugs-featured .layout-e {
+		z-index: 3;
+		animation: moveToCenterLeftCard 9s ease-in-out 3s infinite;
+	}
+
+	.rugs-featured .layout-f {
+		z-index: 2;
+		animation: moveToCenterRightCard 9s ease-in-out 3s infinite;
+	}
+
+	@keyframes brandLogoIntro {
+		0% {
+			opacity: 0;
+			transform: translateY(28px) scale(0.62) rotate(-15deg);
+			filter: brightness(0.86);
+		}
+
+		58% {
+			opacity: 1;
+			transform: translateY(-16px) scale(1.16) rotate(8deg);
+			filter: brightness(1.1);
+		}
+
+		76% {
+			opacity: 1;
+			transform: translateY(6px) scale(0.93) rotate(-6deg);
+			filter: brightness(1.06);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0) scale(1) rotate(0);
+			filter: brightness(1);
+		}
+	}
+
+	@keyframes brandLogoFloat {
+		0%,
+		100% {
+			transform: translateY(0) scale(1) rotate(0deg);
+		}
+
+		25% {
+			transform: translateY(-6px) scale(1.03) rotate(2deg);
+		}
+
+		50% {
+			transform: translateY(0) scale(0.995) rotate(0deg);
+		}
+
+		75% {
+			transform: translateY(-4px) scale(1.02) rotate(-1.6deg);
+		}
+	}
+
+	@keyframes rugFrameA {
+		0%,
+		40% {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		50%,
+		90% {
+			opacity: 0;
+			transform: scale(1.03);
+		}
+
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes rugFrameB {
+		0%,
+		40% {
+			opacity: 0;
+			transform: scale(1.03);
+		}
+
+		50%,
+		90% {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		100% {
+			opacity: 0;
+			transform: scale(1.03);
+		}
+	}
+
+	@keyframes rugFrameABlackGap {
+		0%,
+		33% {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		34%,
+		46% {
+			opacity: 0;
+			transform: scale(1);
+		}
+
+		47%,
+		90% {
+			opacity: 0;
+			transform: scale(1.02);
+		}
+
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes rugKeepHiddenIntro {
+		0%,
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes rugSweepFromRight {
+		0%,
+		45% {
+			opacity: 0;
+			transform: translateX(18%) scale(1.02);
+			clip-path: inset(0 100% 0 0);
+		}
+
+		56%,
+		90% {
+			opacity: 1;
+			transform: translateX(0) scale(1);
+			clip-path: inset(0 0 0 0);
+		}
+
+		100% {
+			opacity: 0;
+			transform: translateX(18%) scale(1.02);
+			clip-path: inset(0 100% 0 0);
+		}
+	}
+
+	@keyframes rugSweepFromLeft {
+		0%,
+		45% {
+			opacity: 0;
+			transform: translateX(-18%) scale(1.02);
+			clip-path: inset(0 0 0 100%);
+		}
+
+		56%,
+		90% {
+			opacity: 1;
+			transform: translateX(0) scale(1);
+			clip-path: inset(0 0 0 0);
+		}
+
+		100% {
+			opacity: 0;
+			transform: translateX(-18%) scale(1.02);
+			clip-path: inset(0 0 0 100%);
+		}
+	}
+
+	@keyframes rugSweepFromLeftIntro {
+		0%,
+		18% {
+			opacity: 0;
+			transform: translateX(-10%) scale(1.01);
+			clip-path: inset(0 0 0 100%);
+		}
+
+		56%,
+		100% {
+			opacity: 1;
+			transform: translateX(0) scale(1);
+			clip-path: inset(0 0 0 0);
+		}
+	}
+
+	@keyframes rugSweepFromRightIntro {
+		0%,
+		18% {
+			opacity: 0;
+			transform: translateX(10%) scale(1.01);
+			clip-path: inset(0 100% 0 0);
+		}
+
+		56%,
+		100% {
+			opacity: 1;
+			transform: translateX(0) scale(1);
+			clip-path: inset(0 0 0 0);
+		}
+	}
+
+	@keyframes extraDriftA {
+		0%,
+		40% {
+			opacity: 1;
+			transform: translateX(-2%) scale(1.05);
+		}
+
+		52%,
+		92% {
+			opacity: 0;
+			transform: translateX(2%) scale(1.08);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(-2%) scale(1.05);
+		}
+	}
+
+	@keyframes extraDriftB {
+		0%,
+		40% {
+			opacity: 0;
+			transform: translateX(2%) scale(1.08);
+		}
+
+		52%,
+		92% {
+			opacity: 1;
+			transform: translateX(0) scale(1.04);
+		}
+
+		100% {
+			opacity: 0;
+			transform: translateX(2%) scale(1.08);
+		}
+	}
+
+	@keyframes extraVerticalA {
+		0%,
+		42% {
+			opacity: 1;
+			transform: translateY(2.2%) scale(1.05);
+		}
+
+		54%,
+		92% {
+			opacity: 0;
+			transform: translateY(-2.2%) scale(1.08);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(2.2%) scale(1.05);
+		}
+	}
+
+	@keyframes extraVerticalB {
+		0%,
+		42% {
+			opacity: 0;
+			transform: translateY(-2.2%) scale(1.08);
+		}
+
+		54%,
+		92% {
+			opacity: 1;
+			transform: translateY(0) scale(1.04);
+		}
+
+		100% {
+			opacity: 0;
+			transform: translateY(-2.2%) scale(1.08);
+		}
+	}
+
+	@keyframes rugSweepFromBottomIntro {
+		0%,
+		20% {
+			opacity: 0;
+			transform: translateY(12%) scale(1.01);
+			clip-path: inset(100% 0 0 0);
+		}
+
+		58%,
+		100% {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+			clip-path: inset(0 0 0 0);
+		}
+	}
+
+	@keyframes rugPanLeftRight {
+		0%,
+		100% {
+			transform: translateX(-3%) scale(1.03);
+		}
+
+		50% {
+			transform: translateX(3%) scale(1.03);
+		}
+	}
+
+	@keyframes rugVerticalLift {
+		0%,
+		100% {
+			transform: translateY(3.5%) scale(1.03);
+		}
+
+		50% {
+			transform: translateY(-3.5%) scale(1.03);
+		}
+	}
+
+	@keyframes moveToCenterLeftCard {
+		0%,
+		100% {
+			transform: translateX(0) scale(1);
+		}
+
+		48% {
+			transform: translateX(8%) scale(1.004);
+		}
+	}
+
+	@keyframes moveToCenterRightCard {
+		0%,
+		100% {
+			transform: translateX(0) scale(1);
+		}
+
+		48% {
+			transform: translateX(-8%) scale(1.004);
+		}
+	}
+
+	@keyframes moveToCenterTop {
+		0%,
+		100% {
+			transform: translateY(0) scale(1);
+		}
+
+		48% {
+			transform: translateY(12%) scale(1.005);
+		}
+	}
+
+	@keyframes moveToCenterBottom {
+		0%,
+		100% {
+			transform: translateY(0) scale(1);
+		}
+
+		48% {
+			transform: translateY(-12%) scale(1.005);
+		}
+	}
+
+	.rug-card:hover img {
+		transform: scale(1.02);
+	}
+
+	@media (max-width: 640px) {
+		.hero-strip {
+			height: 164px;
+		}
+
+		.brand-logo {
+			width: 72px;
+			height: 72px;
+			max-width: 72px;
+			max-height: 72px;
+		}
+
+		.promo-strip {
+			padding: 26px 14px 38px;
+		}
+
+		.promo-title {
+			text-align: center;
+			line-height: 0.88;
+			font-size: clamp(2.3rem, 12vw, 4.6rem);
+		}
+
+		.promo-copy {
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		.promo-lines {
+			text-align: center;
+			margin-top: 0;
+			line-height: 0.96;
+			font-size: clamp(1.25rem, 6.2vw, 2.3rem);
+		}
+
+		.promo-question {
+			text-align: center;
+			margin-top: 10px;
+			font-size: clamp(2.1rem, 9.8vw, 4rem);
+		}
+
+		.rugs-section {
+			padding: 0;
+		}
+
+		.rugs-grid {
+			margin-top: 0;
+			grid-template-columns: 1fr;
+			grid-auto-rows: auto;
+			gap: 0;
+		}
+
+		.rugs-featured {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-rows: repeat(7, 190px);
+		}
+
+		.rugs-featured .layout-a {
+			grid-column: 1;
+			grid-row: 1 / span 2;
+		}
+
+		.rugs-featured .layout-b {
+			grid-column: 2;
+			grid-row: 1;
+		}
+
+		.rugs-featured .layout-c {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		.rugs-featured .layout-d {
+			grid-column: 1 / -1;
+			grid-row: 3 / span 3;
+		}
+
+		.rugs-featured .layout-e {
+			grid-column: 1;
+			grid-row: 6 / span 2;
+		}
+
+		.rugs-featured .layout-f {
+			grid-column: 2;
+			grid-row: 6 / span 2;
+		}
+
+		.rug-card {
+			grid-column: auto;
+			min-height: 430px;
+			grid-row: auto;
+		}
+	}
+</style>
