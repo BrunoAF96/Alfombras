@@ -192,24 +192,32 @@ const extraGroups = rugGroups.slice(6);
 			)}
 		</div>
 
-		<div class="rugs-grid">
+		<div class="rugs-wrap">
 			{
-				extraGroups.map((group, groupIndex) => (
-					<article class={`rug-card rug-switch extra variant-${groupIndex % 4}`}>
-						<img
-							class="frame frame-a"
-							src={encodeURI(`/images/${group[0]}`)}
-							alt="Alfombra artesanal"
-							loading="lazy"
-						/>
-						<img
-							class="frame frame-b"
-							src={encodeURI(`/images/${group[1]}`)}
-							alt="Alfombra artesanal vista alternativa"
-							loading="lazy"
-						/>
-					</article>
-				))
+				Array.from({ length: Math.ceil(extraGroups.length / 6) }, (_, blockIndex) => {
+					const blockCards = extraGroups.slice(blockIndex * 6, blockIndex * 6 + 6);
+					const layouts = ['layout-a', 'layout-b', 'layout-c', 'layout-d', 'layout-e', 'layout-f'];
+					return (
+						<div class="rugs-block">
+							{blockCards.map((group, i) => (
+								<article class={`rug-card rug-switch extra ${layouts[i]}`}>
+									<img
+										class="frame frame-a"
+										src={encodeURI(`/images/${group[0]}`)}
+										alt="Alfombra artesanal"
+										loading="lazy"
+									/>
+									<img
+										class="frame frame-b"
+										src={encodeURI(`/images/${group[1]}`)}
+										alt="Alfombra artesanal vista alternativa"
+										loading="lazy"
+									/>
+								</article>
+							))}
+						</div>
+					);
+				})
 			}
 		</div>
 	</section>
@@ -404,13 +412,16 @@ const extraGroups = rugGroups.slice(6);
 		background: #000;
 	}
 
-	.rugs-grid {
+	.rugs-wrap {
+		width: 100%;
+	}
+
+	.rugs-block {
 		width: 100%;
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-auto-flow: dense;
-		grid-auto-rows: 120px;
+		grid-template-rows: repeat(11, minmax(175px, auto));
 		overflow: hidden;
 		gap: 0;
 	}
@@ -434,93 +445,92 @@ const extraGroups = rugGroups.slice(6);
 		min-height: 0;
 	}
 
-	.rugs-featured .layout-a {
+	.rugs-featured .layout-a,
+	.rugs-block .layout-a {
 		grid-column: 1;
 		grid-row: 1 / span 4;
 	}
 
-	.rugs-featured .layout-b {
+	.rugs-featured .layout-b,
+	.rugs-block .layout-b {
 		grid-column: 2;
 		grid-row: 1 / span 2;
 	}
 
-	.rugs-featured .layout-c {
+	.rugs-featured .layout-c,
+	.rugs-block .layout-c {
 		grid-column: 2;
 		grid-row: 3 / span 2;
 	}
 
-	.rugs-featured .layout-d {
+	.rugs-featured .layout-d,
+	.rugs-block .layout-d {
 		grid-column: 1 / -1;
 		grid-row: 5 / span 3;
 	}
 
-	.rugs-featured .layout-e {
+	.rugs-featured .layout-e,
+	.rugs-block .layout-e {
 		grid-column: 1;
 		grid-row: 8 / span 4;
 	}
 
-	.rugs-featured .layout-f {
+	.rugs-featured .layout-f,
+	.rugs-block .layout-f {
 		grid-column: 2;
 		grid-row: 8 / span 4;
 	}
 
-	.rugs-grid .rug-card {
-		grid-column: span 1;
-		grid-row: span 2;
-		min-height: 0;
+	.rugs-block .rug-card {
 		background: #070707;
 	}
 
-	.rugs-grid .rug-card:nth-child(4n + 1) {
-		grid-row: span 3;
+	.rugs-block .extra.layout-a .frame-a {
+		animation: extraVerticalA 22s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card:nth-child(4n + 2) {
-		grid-row: span 2;
+	.rugs-block .extra.layout-a .frame-b {
+		animation: extraVerticalB 22s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card:nth-child(4n + 3) {
-		grid-row: span 2;
-	}
-
-	.rugs-grid .rug-card:nth-child(4n + 4) {
-		grid-row: span 3;
-	}
-
-	.rugs-grid .rug-card .frame-a {
+	.rugs-block .extra.layout-b .frame-a {
 		animation: extraDriftA 18s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card .frame-b {
+	.rugs-block .extra.layout-b .frame-b {
 		animation: extraDriftB 18s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card.variant-0 .frame-a {
-		animation: extraVerticalA 20s ease-in-out 1 forwards;
+	.rugs-block .extra.layout-c .frame-a {
+		animation: extraDriftB 20s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card.variant-0 .frame-b {
-		animation: extraVerticalB 20s ease-in-out 1 forwards;
+	.rugs-block .extra.layout-c .frame-b {
+		animation: extraDriftA 20s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card.variant-2 .frame-a,
-	.rugs-grid .rug-card.variant-2 .frame-b {
-		animation-duration: 22s;
+	.rugs-block .extra.layout-d .frame-a {
+		animation: extraDriftA 24s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card.variant-3 .frame-a,
-	.rugs-grid .rug-card.variant-3 .frame-b {
-		animation-duration: 19s;
+	.rugs-block .extra.layout-d .frame-b {
+		animation: extraDriftB 24s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card:nth-child(3n) .frame-a,
-	.rugs-grid .rug-card:nth-child(3n) .frame-b {
-		animation-delay: 1.2s;
+	.rugs-block .extra.layout-e .frame-a {
+		animation: extraVerticalB 22s ease-in-out 1 forwards;
 	}
 
-	.rugs-grid .rug-card:nth-child(3n + 1) .frame-a,
-	.rugs-grid .rug-card:nth-child(3n + 1) .frame-b {
-		animation-delay: 2.1s;
+	.rugs-block .extra.layout-e .frame-b {
+		animation: extraVerticalA 22s ease-in-out 1 forwards;
+	}
+
+	.rugs-block .extra.layout-f .frame-a {
+		animation: extraDriftA 19s ease-in-out 1 forwards;
+	}
+
+	.rugs-block .extra.layout-f .frame-b {
+		animation: extraDriftB 19s ease-in-out 1 forwards;
 	}
 
 	.rug-card img {
@@ -534,7 +544,7 @@ const extraGroups = rugGroups.slice(6);
 		transition: transform 0.75s ease;
 	}
 
-	.rugs-grid .rug-card img {
+	.rugs-block .rug-card img {
 		object-fit: cover;
 		padding: 0;
 	}
@@ -1110,11 +1120,43 @@ const extraGroups = rugGroups.slice(6);
 			padding: 0;
 		}
 
-		.rugs-grid {
-			margin-top: 0;
+		.rugs-block {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-			grid-auto-rows: 130px;
-			gap: 0;
+			grid-template-rows: repeat(7, 118px);
+		}
+
+		.rugs-block .layout-a {
+			grid-column: 1;
+			grid-row: 1 / span 2;
+		}
+
+		.rugs-block .layout-b {
+			grid-column: 2;
+			grid-row: 1;
+		}
+
+		.rugs-block .layout-c {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		.rugs-block .layout-d {
+			grid-column: 1 / -1;
+			grid-row: 3 / span 3;
+		}
+
+		.rugs-block .layout-e {
+			grid-column: 1;
+			grid-row: 6 / span 2;
+		}
+
+		.rugs-block .layout-f {
+			grid-column: 2;
+			grid-row: 6 / span 2;
+		}
+
+		.rugs-block .rug-card {
+			min-height: 0;
 		}
 
 		.rugs-featured {
@@ -1156,17 +1198,7 @@ const extraGroups = rugGroups.slice(6);
 			min-height: 0;
 		}
 
-		.rugs-grid .rug-card {
-			grid-column: auto;
-			min-height: 0;
-			aspect-ratio: auto;
-			grid-row: span 2;
-		}
 
-		.rugs-grid .rug-card:nth-child(4n + 1),
-		.rugs-grid .rug-card:nth-child(4n + 4) {
-			grid-row: span 3;
-		}
 
 		.whatsapp-float {
 			right: 12px;
