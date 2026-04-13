@@ -414,16 +414,16 @@ const extraGroups = rugGroups.slice(6);
 
 	.rugs-wrap {
 		width: 100%;
-	}
-
-	.rugs-block {
-		width: 100%;
-		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-template-rows: repeat(11, minmax(175px, auto));
-		overflow: hidden;
 		gap: 0;
+	}
+
+	.rugs-wrap .rug-card {
+		position: relative;
+		aspect-ratio: 3 / 4;
+		overflow: hidden;
+		background: #0a0a0a;
 	}
 
 	.rugs-featured {
@@ -485,54 +485,6 @@ const extraGroups = rugGroups.slice(6);
 		background: #070707;
 	}
 
-	.rugs-block .extra.layout-a .frame-a {
-		animation: extraVerticalA 22s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-a .frame-b {
-		animation: extraVerticalB 22s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-b .frame-a {
-		animation: extraDriftA 18s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-b .frame-b {
-		animation: extraDriftB 18s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-c .frame-a {
-		animation: extraDriftB 20s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-c .frame-b {
-		animation: extraDriftA 20s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-d .frame-a {
-		animation: extraDriftA 24s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-d .frame-b {
-		animation: extraDriftB 24s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-e .frame-a {
-		animation: extraVerticalB 22s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-e .frame-b {
-		animation: extraVerticalA 22s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-f .frame-a {
-		animation: extraDriftA 19s ease-in-out 1 forwards;
-	}
-
-	.rugs-block .extra.layout-f .frame-b {
-		animation: extraDriftB 19s ease-in-out 1 forwards;
-	}
-
 	.rug-card img {
 		position: absolute;
 		inset: 0;
@@ -544,37 +496,9 @@ const extraGroups = rugGroups.slice(6);
 		transition: transform 0.75s ease;
 	}
 
-	.rugs-block .frame-bg {
+	.rugs-wrap .rug-card .frame-a,
+	.rugs-wrap .rug-card .frame-b {
 		object-fit: cover;
-		filter: blur(12px) brightness(0.45) saturate(0.55);
-		transform: scale(1.14);
-		z-index: 0;
-		opacity: 1 !important;
-		animation: none !important;
-	}
-
-	.rugs-block .frame-a,
-	.rugs-block .frame-b {
-		z-index: 1;
-	}
-
-	.rugs-block .frame-bg {
-		object-fit: cover;
-		filter: blur(12px) brightness(0.45) saturate(0.55);
-		transform: scale(1.14);
-		z-index: 0;
-		opacity: 1 !important;
-		animation: none !important;
-	}
-
-	.rugs-block .frame-a,
-	.rugs-block .frame-b {
-		z-index: 1;
-	}
-
-	.rugs-block .rug-card img {
-		object-fit: contain;
-		padding: 0;
 	}
 
 	.rug-switch .frame {
@@ -1146,45 +1070,6 @@ const extraGroups = rugGroups.slice(6);
 
 		.rugs-section {
 			padding: 0;
-		}
-
-		.rugs-block {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			grid-template-rows: repeat(7, 118px);
-		}
-
-		.rugs-block .layout-a {
-			grid-column: 1;
-			grid-row: 1 / span 2;
-		}
-
-		.rugs-block .layout-b {
-			grid-column: 2;
-			grid-row: 1;
-		}
-
-		.rugs-block .layout-c {
-			grid-column: 2;
-			grid-row: 2;
-		}
-
-		.rugs-block .layout-d {
-			grid-column: 1 / -1;
-			grid-row: 3 / span 3;
-		}
-
-		.rugs-block .layout-e {
-			grid-column: 1;
-			grid-row: 6 / span 2;
-		}
-
-		.rugs-block .layout-f {
-			grid-column: 2;
-			grid-row: 6 / span 2;
-		}
-
-		.rugs-block .rug-card {
-			min-height: 0;
 		}
 
 		.rugs-featured {
