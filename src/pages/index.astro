@@ -245,8 +245,7 @@ const extraGroups = rugGroups.slice(6);
 		justify-content: center;
 		overflow: hidden;
 		color: #f3f3f3;
-		background:
-			linear-gradient(90deg, #0a0a0a 0%, #161616 45%, #0b0b0b 100%);
+		background: #000;
 	}
 
 	.brand-logo {
@@ -275,7 +274,7 @@ const extraGroups = rugGroups.slice(6);
 		position: relative;
 		overflow-x: clip;
 		overflow-y: hidden;
-		background: #000;
+		background: #000 !important;
 	}
 
 	.promo-strip::before,
@@ -287,6 +286,7 @@ const extraGroups = rugGroups.slice(6);
 	}
 
 	.promo-strip::before {
+		display: none;
 		opacity: 0;
 		background-image: radial-gradient(rgba(255, 255, 255, 0.2) 0.6px, transparent 0.8px);
 		background-size: 3px 3px;
@@ -294,6 +294,7 @@ const extraGroups = rugGroups.slice(6);
 	}
 
 	.promo-strip::after {
+		display: none;
 		opacity: 0;
 		background-image:
 			repeating-linear-gradient(
@@ -398,10 +399,7 @@ const extraGroups = rugGroups.slice(6);
 	.rugs-section {
 		padding: 0;
 		overflow-x: clip;
-		background:
-			radial-gradient(circle at 10% 0%, rgba(116, 255, 184, 0.08), transparent 26%),
-			radial-gradient(circle at 90% 30%, rgba(227, 139, 255, 0.08), transparent 34%),
-			#050505;
+		background: #000;
 	}
 
 	.rugs-grid {
@@ -1074,13 +1072,18 @@ const extraGroups = rugGroups.slice(6);
 		}
 
 		.promo-strip {
-			padding: 26px 14px 38px;
+			padding: 26px 8px 38px;
+		}
+
+		.promo-content {
+			width: 100%;
 		}
 
 		.promo-title {
 			text-align: center;
 			line-height: 0.88;
-			font-size: clamp(2.3rem, 12vw, 4.6rem);
+			font-size: clamp(2.5rem, 13.4vw, 5rem);
+			width: 100%;
 		}
 
 		.promo-copy {
