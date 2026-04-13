@@ -256,7 +256,8 @@ const extraGroups = rugGroups.slice(6);
 		display: flex;
 		justify-content: center;
 		position: relative;
-		overflow: hidden;
+		overflow-x: clip;
+		overflow-y: hidden;
 		background:
 			radial-gradient(circle at 86% 14%, rgba(255, 227, 121, 0.16), transparent 22%),
 			radial-gradient(circle at 12% 82%, rgba(129, 142, 255, 0.1), transparent 30%),
@@ -382,6 +383,7 @@ const extraGroups = rugGroups.slice(6);
 
 	.rugs-section {
 		padding: 0;
+		overflow-x: clip;
 		background:
 			radial-gradient(circle at 10% 0%, rgba(116, 255, 184, 0.08), transparent 26%),
 			radial-gradient(circle at 90% 30%, rgba(227, 139, 255, 0.08), transparent 34%),
@@ -395,6 +397,7 @@ const extraGroups = rugGroups.slice(6);
 		grid-template-columns: repeat(12, minmax(0, 1fr));
 		grid-auto-flow: dense;
 		grid-auto-rows: 110px;
+		overflow: hidden;
 		gap: 0;
 	}
 
@@ -404,6 +407,7 @@ const extraGroups = rugGroups.slice(6);
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		grid-template-rows: repeat(11, minmax(175px, auto));
+		overflow: hidden;
 		gap: 0;
 	}
 
