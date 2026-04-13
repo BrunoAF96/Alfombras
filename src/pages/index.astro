@@ -982,7 +982,7 @@ const extraGroups = rugGroups.slice(6);
 
 		.rugs-featured {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-			grid-template-rows: repeat(7, 190px);
+			grid-template-rows: repeat(7, 118px);
 		}
 
 		.rugs-featured .layout-a {
@@ -1015,9 +1015,14 @@ const extraGroups = rugGroups.slice(6);
 			grid-row: 6 / span 2;
 		}
 
-		.rug-card {
+		.rugs-featured .rug-card {
+			min-height: 0;
+		}
+
+		.rugs-grid .rug-card {
 			grid-column: auto;
-			min-height: 430px;
+			min-height: 240px;
+			aspect-ratio: 16 / 10;
 			grid-row: auto;
 		}
 	}
