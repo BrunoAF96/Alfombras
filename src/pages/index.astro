@@ -47,8 +47,8 @@ const rugGroups = [
 		'WhatsApp Image 2026-04-13 at 16.57.37.jpeg'
 	],
 	[
-		'WhatsApp Image 2026-04-13 at 16.58.14.jpeg',
-		'WhatsApp Image 2026-04-13 at 16.58.14 (1).jpeg'
+		'gato fondo gris (1).jpeg',
+		'gato fondo gris (2).jpeg'
 	],
 	[
 		'WhatsApp Image 2026-04-13 at 16.58.26.jpeg',
@@ -414,15 +414,13 @@ const extraGroups = rugGroups.slice(6);
 
 	.rugs-wrap {
 		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 0;
+		column-count: 2;
+		column-gap: 0;
 	}
 
 	.rugs-wrap .rug-card {
-		position: relative;
-		aspect-ratio: 3 / 4;
-		overflow: hidden;
+		display: block;
+		break-inside: avoid;
 		background: #0a0a0a;
 	}
 
@@ -498,7 +496,22 @@ const extraGroups = rugGroups.slice(6);
 
 	.rugs-wrap .rug-card .frame-a,
 	.rugs-wrap .rug-card .frame-b {
-		object-fit: cover;
+		position: static;
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		inset: auto;
+		transform: none;
+	}
+
+	.rugs-wrap .rug-card .frame-a {
+		opacity: 1 !important;
+		animation: none !important;
+	}
+
+	.rugs-wrap .rug-card .frame-b {
+		display: none;
 	}
 
 	.rug-switch .frame {
@@ -1024,6 +1037,10 @@ const extraGroups = rugGroups.slice(6);
 	}
 
 	@media (max-width: 640px) {
+		.rugs-wrap {
+			column-count: 2;
+		}
+
 		.hero-strip {
 			height: 164px;
 		}
