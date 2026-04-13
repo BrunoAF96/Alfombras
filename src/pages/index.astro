@@ -222,7 +222,13 @@ const extraGroups = rugGroups.slice(6);
 		aria-label="Pedir por WhatsApp"
 	>
 		<span class="wa-bubble">¡pedi la tuya!</span>
-		<span class="wa-icon" aria-hidden="true">WA</span>
+		<span class="wa-icon" aria-hidden="true">
+			<svg viewBox="0 0 24 24" role="img" focusable="false">
+				<path
+					d="M12.04 2C6.55 2 2.1 6.45 2.1 11.94c0 1.76.46 3.48 1.34 4.99L2 22l5.21-1.37a9.89 9.89 0 0 0 4.83 1.23h.01c5.49 0 9.94-4.45 9.94-9.94A9.93 9.93 0 0 0 12.04 2Zm5.77 14.08c-.24.67-1.4 1.28-1.93 1.32-.5.04-1.13.06-1.83-.17-.42-.14-.96-.31-1.66-.61-2.91-1.26-4.81-4.33-4.95-4.53-.14-.2-1.18-1.58-1.18-3.02 0-1.44.75-2.15 1.02-2.45.27-.3.58-.37.77-.37.19 0 .38 0 .54.01.18.01.42-.07.65.47.24.57.82 1.96.89 2.1.07.14.12.31.02.5-.1.2-.14.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.3-.12.59.17.29.77 1.26 1.65 2.05 1.13 1.01 2.08 1.33 2.37 1.48.29.14.46.12.63-.07.17-.2.72-.84.91-1.12.19-.29.38-.24.65-.14.27.1 1.69.8 1.98.94.29.14.48.21.55.32.07.12.07.68-.17 1.35Z"
+				/>
+			</svg>
+		</span>
 	</a>
 </Layout>
 
@@ -977,9 +983,12 @@ const extraGroups = rugGroups.slice(6);
 		justify-content: center;
 		border-radius: 50%;
 		background: rgba(255, 255, 255, 0.2);
-		font-weight: 900;
-		font-size: 0.74rem;
-		letter-spacing: 0.04em;
+	}
+
+	.wa-icon svg {
+		width: 21px;
+		height: 21px;
+		fill: #fff;
 	}
 
 	.wa-bubble {
@@ -1106,7 +1115,11 @@ const extraGroups = rugGroups.slice(6);
 		.wa-icon {
 			width: 34px;
 			height: 34px;
-			font-size: 0.7rem;
+		}
+
+		.wa-icon svg {
+			width: 20px;
+			height: 20px;
 		}
 
 		.wa-bubble {
