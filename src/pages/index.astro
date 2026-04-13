@@ -544,6 +544,34 @@ const extraGroups = rugGroups.slice(6);
 		transition: transform 0.75s ease;
 	}
 
+	.rugs-block .frame-bg {
+		object-fit: cover;
+		filter: blur(12px) brightness(0.45) saturate(0.55);
+		transform: scale(1.14);
+		z-index: 0;
+		opacity: 1 !important;
+		animation: none !important;
+	}
+
+	.rugs-block .frame-a,
+	.rugs-block .frame-b {
+		z-index: 1;
+	}
+
+	.rugs-block .frame-bg {
+		object-fit: cover;
+		filter: blur(12px) brightness(0.45) saturate(0.55);
+		transform: scale(1.14);
+		z-index: 0;
+		opacity: 1 !important;
+		animation: none !important;
+	}
+
+	.rugs-block .frame-a,
+	.rugs-block .frame-b {
+		z-index: 1;
+	}
+
 	.rugs-block .rug-card img {
 		object-fit: contain;
 		padding: 0;
