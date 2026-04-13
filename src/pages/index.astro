@@ -221,8 +221,8 @@ const extraGroups = rugGroups.slice(6);
 		rel="noopener noreferrer"
 		aria-label="Pedir por WhatsApp"
 	>
-		<span class="wa-icon" aria-hidden="true">W</span>
-		<span class="wa-text">pedi la tuya</span>
+		<span class="wa-bubble">¡pedi la tuya!</span>
+		<span class="wa-icon" aria-hidden="true">WA</span>
 	</a>
 </Layout>
 
@@ -948,17 +948,16 @@ const extraGroups = rugGroups.slice(6);
 		position: fixed;
 		right: 16px;
 		bottom: 16px;
-		display: inline-flex;
+		display: flex;
 		align-items: center;
-		gap: 10px;
-		padding: 10px 14px 10px 10px;
-		border-radius: 999px;
+		justify-content: center;
+		width: 58px;
+		height: 58px;
+		border-radius: 50%;
 		background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
 		color: #fff;
 		font-family: 'Outfit', sans-serif;
-		font-weight: 800;
-		font-size: 0.95rem;
-		letter-spacing: 0.01em;
+		font-weight: 900;
 		text-decoration: none;
 		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.42);
 		z-index: 50;
@@ -971,20 +970,33 @@ const extraGroups = rugGroups.slice(6);
 	}
 
 	.wa-icon {
-		width: 28px;
-		height: 28px;
+		width: 36px;
+		height: 36px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
 		background: rgba(255, 255, 255, 0.2);
 		font-weight: 900;
-		font-size: 0.88rem;
+		font-size: 0.74rem;
+		letter-spacing: 0.04em;
 	}
 
-	.wa-text {
-		line-height: 1;
+	.wa-bubble {
+		position: absolute;
+		right: 6px;
+		bottom: 70px;
+		padding: 6px 10px;
+		border-radius: 999px;
+		background: rgba(0, 0, 0, 0.78);
+		color: #fff;
+		font-size: 0.84rem;
+		font-weight: 800;
+		letter-spacing: 0.01em;
 		text-transform: lowercase;
+		white-space: nowrap;
+		box-shadow: 0 8px 18px rgba(0, 0, 0, 0.38);
+		pointer-events: none;
 	}
 
 	@media (max-width: 640px) {
@@ -1087,13 +1099,21 @@ const extraGroups = rugGroups.slice(6);
 		.whatsapp-float {
 			right: 12px;
 			bottom: calc(12px + env(safe-area-inset-bottom));
-			padding: 10px 12px 10px 10px;
-			font-size: 0.9rem;
+			width: 54px;
+			height: 54px;
 		}
 
 		.wa-icon {
-			width: 26px;
-			height: 26px;
+			width: 34px;
+			height: 34px;
+			font-size: 0.7rem;
+		}
+
+		.wa-bubble {
+			right: 2px;
+			bottom: 64px;
+			font-size: 0.78rem;
+			padding: 5px 9px;
 		}
 	}
 </style>
