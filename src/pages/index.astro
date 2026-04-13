@@ -321,6 +321,7 @@ const extraGroups = rugGroups.slice(6);
 
 	.promo-title {
 		margin: 0;
+		margin-left: -1.8rem;
 		font-family: 'Archivo Black', sans-serif;
 		font-size: clamp(3rem, 11.5vw, 7.8rem);
 		line-height: 0.85;
@@ -346,6 +347,7 @@ const extraGroups = rugGroups.slice(6);
 		margin-left: auto;
 		width: min(760px, 100%);
 		margin-top: 2px;
+		margin-right: -1.8rem;
 	}
 
 	.promo-lines {
@@ -1110,8 +1112,8 @@ const extraGroups = rugGroups.slice(6);
 
 		.rugs-grid {
 			margin-top: 0;
-			grid-template-columns: 1fr;
-			grid-auto-rows: 160px;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-auto-rows: 130px;
 			gap: 0;
 		}
 
